@@ -28,12 +28,19 @@ public class Main {
         //System.out.println(element1.select("td").get(10).text());
         //System.out.println(element1.select("td").attr("class","base_txt").first());
 
-        for
+        boolean nwm = false;
 
-        String idk = element1.getElementsByClass("InnerWfTitle").get(0).text();
+        for(int i = 0; i >= 0; i++) {
 
-        System.out.println(element1.getElementsByClass("InnerWfTitle"));
-        System.out.println(idk);
+            try{
+                rama.add(element1.getElementsByClass("InnerWfTitle").get(i).text());
+            } catch (IndexOutOfBoundsException e) {
+                break;
+            }
+
+        }
+
+        System.out.println(rama);
     }
 
 }
