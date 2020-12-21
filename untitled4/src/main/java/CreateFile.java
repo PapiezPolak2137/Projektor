@@ -1,17 +1,17 @@
-import java.io.File;  // Import the File class
-import java.io.IOException;  // Import the IOException class to handle errors
+import java.io.File;
+import java.io.IOException;
 
 public class CreateFile {
     public static void main() {
         try {
-            File myObj = new File("filename.txt");
+            File myObj = new File("Lista.txt");
             if (myObj.createNewFile()) {
-                System.out.println("File created: " + myObj.getName());
+                System.out.println("Plik utworzony: " + myObj.getName());
             } else {
-                System.out.println("File already exists.");
+                System.out.println("Plik już istnieje");
             }
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Wystąpił błąd");
             e.printStackTrace();
         }
     }
